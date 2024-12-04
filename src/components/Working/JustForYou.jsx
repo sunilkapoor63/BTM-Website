@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import "../../style/JustForYou.scss";
 
 function JustForYou() {
@@ -67,27 +67,39 @@ function JustForYou() {
   ]);
 
   return (
-    <React.StrictMode>
-      <section className="justforyou">
-        <div className="heading">
-          <h1>Just for you</h1>
-        </div>
-        <div className="cards">
-          {item.map((value, index) => {
-            return (
-              <div className="card1" key={index}>
-                <img src={value.image} alt="" />
-                <div className="descripiton">
-                  <p>{value.text}</p>
-                  <h4>{value.price}</h4>
-                  <p>1 piece (min.order)</p>
+    <section className="justforyou">
+      <div className="heading">
+        <h1>Just for you</h1>
+      </div>
+      <div className="cards">
+        {item.map((value, index) => {
+          return (
+            <div className="card1" key={index}>
+              {index === 0 ? (
+                // Link only for the first item
+                <Link to="/item-detail">
+                  <img src={value.image} alt="" />
+                  <div className="descripiton">
+                    <p>{value.text}</p>
+                    <h4>{value.price}</h4>
+                    <p>1 piece (min.order)</p>
+                  </div>
+                </Link>
+              ) : (
+                <div>
+                  <img src={value.image} alt="" />
+                  <div className="descripiton">
+                    <p>{value.text}</p>
+                    <h4>{value.price}</h4>
+                    <p>1 piece (min.order)</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-    </React.StrictMode>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 

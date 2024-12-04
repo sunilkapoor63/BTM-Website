@@ -1,0 +1,89 @@
+.item-detail {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  
+  .item-detail-container {
+    display: flex;
+    align-items: flex-start; /* Aligns the image and text at the top */
+    justify-content: space-between; /* Space between the image and the description */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .item-image {
+    width: 40%; /* Adjust the image size */
+    margin-right: 30px; /* Space between the image and description */
+  }
+  
+  .item-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .item-description {
+    width: 55%; /* Adjust the width of the description */
+    padding: 0 10px; /* Padding for the text */
+  }
+  
+  .item-description h2 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .item-description h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  .item-description p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+  .footer-details {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .footer-details p {
+    margin: 0.5rem 0;
+  }
+  
+  .item-description button {
+    background-color: #13032f;
+    color: #fff;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 5px;
+    font-size: 1rem;
+  }
+  
+  .item-description button:hover {
+    background-color: #1a003d;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .item-detail-container {
+      flex-direction: column; /* Stacks the image and description vertically */
+      align-items: center; /* Centers the content */
+      text-align: center; /* Centers the text */
+    }
+  
+    .item-image {
+      width: 80%; /* Makes the image wider on smaller screens */
+      margin-right: 0; /* Removes right margin */
+      margin-bottom: 20px; /* Adds space between image and description */
+    }
+  
+    .item-description {
+      width: 100%; /* Makes the description full width on smaller screens */
+    }
+  }
+  
